@@ -1,6 +1,5 @@
 # qcaob-aim 
-For now, this repository hosts prototype code to solve the Anderson impurity model in a single script:
-anderson_impurity_model.py
+This repository hosts prototype code to solve the Anderson impurity model. For a tutorial see ./aim_tutorial.ipynb. To run the ground state solver as an application-oriented benchmark following the QED-C framework, see ./benchmarking/benchmarks-qiskit.ipynb.
 Note: qcaob-aim stands for quantum computation application oriented benchmark - anderson impurity model.
 
 To run the code, a few dependencies need to be installed. Some of the main libraries include:
@@ -56,12 +55,12 @@ Because the code is very much still in development, I will try and provide a cur
 below. With the dependencies above installed, it should more or less run out of the box.
 
 MAIN TEST FUNCTIONS:
-- Function: main2()-- Ignore this function for now. Being written as a test.
 - Function: main()-- Main function where all current testing occurs. This function is currently called when the script
 is run. To understand usage of various classes and methods look at this function.
-- Function: fit_func(x, a, b)-- A fit function used somewhere else in the code. (Not really a main function.)
+- Function: main2()-- Ignore this function for now. Being written as a test.
 - Function: symmetric_ansatz_test(model_hamiltonian)-- This is a wrapper function to test the various performance 
 aspects of the symmetry-preserving ansatz. Need to provide a Hamiltonian for it to test on.
+
 
 FUNCTIONS TO CONSTRUCT TEST AIMS:
 - Function: random_two_impurity_example(seed)-- This function takes a random seed and generates a random AIM with two
@@ -79,3 +78,8 @@ the Qulacs emulator. Floating-point precision in VQE angles, i.e., no shot noise
 - Class: SymmQulacsVqeEmulator-- This is a class whose methods allow for the solution of a given AIM using VQE. It uses
 what I am calling the "2D Interacting, Symmetry-Preserving Ansatz" and Qulacs as the emulator. 
 Floating-point precision in VQE angles, i.e., no shot noise.
+
+TUTORIAL JUPYTER NOTEBOOKS: 
+- ./benchmarking/benchmarks-qiskit.ipynb
+- ./aim_tutorial.ipynb
+
